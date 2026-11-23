@@ -48,6 +48,13 @@ Folder suffixes like `.desktop` limit where a plugin is built, the same as in Ve
 2. Run `node scripts/generate.mjs` to update `plugins.json` and this README.
 3. Commit and push. CI checks that both files are up to date and publishes a `.zip` for every plugin.
 
+### Updating a plugin
+
+1. Change the code and raise `version` in its `plugin.json` (for example `1.0.0` → `1.1.0`).
+2. Run `node scripts/generate.mjs`, then commit and push.
+
+Anyone who installed it from this source sees **UPDATE** on the plugin card and an **Update all & restart** bar in the Plugins tab. Versions are compared number by number, so `1.10.0` is newer than `1.9.0`.
+
 ## License
 
 [GPL-3.0](LICENSE). Each plugin is credited to its author above.
