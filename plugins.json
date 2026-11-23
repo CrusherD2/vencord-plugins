@@ -1,0 +1,54 @@
+{
+    "name": "CrusherD2's Vencord Plugins",
+    "description": "Community Vencord plugins you can install from the Plugins tab of CrusherD2's Vencord fork.",
+    "repository": "https://github.com/CrusherD2/vencord-plugins",
+    "plugins": [
+        {
+            "name": "DownloadAllImages",
+            "folder": "downloadAllImages",
+            "description": "Adds a download button on image collages that saves every image from that message.",
+            "category": "Media & Files",
+            "version": "1.0.0",
+            "authors": [
+                {
+                    "name": "CrusherD2",
+                    "github": "CrusherD2"
+                }
+            ],
+            "target": null,
+            "requirements": []
+        },
+        {
+            "name": "FriendTimezones",
+            "folder": "friendTimezones",
+            "description": "Set a friend's timezone from their profile menu, then see their current time next to their name in chat, DMs, and calls.",
+            "category": "Friends & Chat",
+            "version": "1.0.0",
+            "authors": [
+                {
+                    "name": "CrusherD2",
+                    "github": "CrusherD2"
+                }
+            ],
+            "target": null,
+            "requirements": []
+        },
+        {
+            "name": "SmartAttachments",
+            "folder": "smartAttachments.desktop",
+            "description": "Compress oversized videos locally and add download links for external file transfers.",
+            "category": "Media & Files",
+            "version": "1.5.1",
+            "authors": [
+                {
+                    "name": "joobert",
+                    "github": "joobert"
+                }
+            ],
+            "target": "desktop",
+            "requirements": [
+                "FFmpeg and FFprobe for video compression"
+            ]
+        }
+    ]
+}

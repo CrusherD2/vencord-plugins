@@ -1,0 +1,8 @@
+{
+    "name": "SmartAttachments",
+    "description": "Compress oversized videos locally and add download links for external file transfers.",
+    "category": "Media & Files",
+    "version": "1.5.1",
+    "authors": [{ "name": "joobert", "github": "joobert" }],
+    "requirements": ["FFmpeg and FFprobe for video compression"]
+}

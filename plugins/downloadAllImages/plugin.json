@@ -1,0 +1,7 @@
+{
+    "name": "DownloadAllImages",
+    "description": "Adds a download button on image collages that saves every image from that message.",
+    "category": "Media & Files",
+    "version": "1.0.0",
+    "authors": [{ "name": "CrusherD2", "github": "CrusherD2" }]
+}

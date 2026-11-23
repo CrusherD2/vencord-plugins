@@ -1,0 +1,39 @@
+name: CI
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+
+            - name: Check plugins.json and README.md are up to date
+              run: node scripts/generate.mjs --check
+
+            - name: Zip every plugin
+              if: github.ref == 'refs/heads/main'
+              run: |
+                  mkdir dist
+                  cd plugins
+                  for dir in */; do
+                      zip -qr "../dist/${dir%/}.zip" "${dir%/}"
+                  done
+
+            - name: Publish zips to the "latest" release
+              if: github.ref == 'refs/heads/main'
+              run: |
+                  gh release view latest > /dev/null 2>&1 || gh release create latest --title "Latest plugins" --notes "Download a plugin .zip and drop it on Add plugins in CrusherD2's Vencord fork."
+                  gh release upload latest --clobber dist/*.zip
+                  gh release edit latest --latest
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

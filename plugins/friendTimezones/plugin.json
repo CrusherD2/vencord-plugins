@@ -1,0 +1,7 @@
+{
+    "name": "FriendTimezones",
+    "description": "Set a friend's timezone from their profile menu, then see their current time next to their name in chat, DMs, and calls.",
+    "category": "Friends & Chat",
+    "version": "1.0.0",
+    "authors": [{ "name": "CrusherD2", "github": "CrusherD2" }]
+}

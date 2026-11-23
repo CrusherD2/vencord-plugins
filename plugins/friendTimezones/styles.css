@@ -1,0 +1,15 @@
+.vc-friend-time-badge {
+    display: inline-block;
+    flex: 0 0 auto;
+    height: 16px;
+    margin: 0 4px;
+    padding: 0 4px;
+    border-radius: 4px;
+    background-color: color-mix(in srgb, var(--white-500, #fff) 18%, transparent);
+    color: var(--text-default, var(--header-primary, #fff));
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
